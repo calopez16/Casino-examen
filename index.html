@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Principal | Super Casino</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+
+    <link rel="shortcut icon" href="img/icon.png" />
+
+</head>
+<body>
+    <div class="header">
+        <h1>Super Casino</h1>
+        <h2>Menú</h2>
+    </div>
+
+<div class="contenido">
+    <div>
+        <a href="##" onclick="abrirCuadro('1');">Adivina el numero</a>
+        <a href="##" onclick="abrirCuadro('2');">Ruleta de la Suerte</a>
+    </div>
+
+</div>
+
+<div class="cuadro animated fadeInDown">
+    <div class="icons" onclick="cerrarCuadro();">
+        <img src="img/quitar.png" width="30">
+        <h4>Cerrar</h4>
+    </div>
+
+    <div class="icons" onclick="VerTopAdivina();" style="top:100px;" id="fuck1">
+            <img src="img/ganadores.png" width="30">
+            <h4>Top</h4>
+    </div>
+
+   
+    <div class="adivinar">
+        <h2 style="margin-top: 50px;">Adivina el número</h2>
+        <br>
+        <h5 style="font-size: 20px">Elige un número entre 1 y 3</h5>
+        <input type="number" value="1" class="texto" id="txt_NumIngresado" max="3" min="0" ><br>
+
+        <h4 id="Cargando">Generando Número...</h4><br>
+
+        <img src="img/numeros.gif" id="GifNumeros"><br>
+
+        <h4 id="numero1"></h4>
+
+       
+        <input type="button" class="boton btn btn-sm btn-primary" value="Probar suerte" onclick="randoms();">
+
+
+         <h4 id="Estado"></h4>      
+
+        <br><br><br>
+        <div class="puntos1">
+            <h4 style="color: white;margin-bottom: -20px">Record</h4>
+            <h4 style="color: yellow;" id="RecordAdivina">0</h4>
+        </div>
+        
+        <div class="puntos2">
+            <h4 style="color: white;margin-bottom: -20px">Puntos</h4>
+            <h4 id="PuntosAdivinar" style="color: lime;">0</h4>
+        </div>
+
+        <div id="Lista" style="top:100px;height:auto;">
+            <h4 style="font-size: 50px">Superaste el record actual!!!</h4>
+            <h5 style="font-size: 40px;margin-bottom: -20px;">Ingresa tu nombre:</h5>
+            <input type="text" id="nombreadivinar" style="font-size: 30px;border-radius: 10px; text-align: center">
+            <br>
+            <h5 id="ingresaAdivina" style="font-size: 18px;color: #a30000;display: none">Ingresa tu nombre, porfavor...</h5>
+            <input type="button" class="boton btn btn-sm btn-success" value="Aceptar" onclick="recordAdivina()">
+        </div>
+
+        <div class="ListasTop">
+            <div class="icons" onclick="QuitarTop();" style="position: absolute; left: -20%;">
+                <img src="img/quitar.png" width="30">
+                <h4>Cerrar</h4>
+            </div>
+
+            <h2 style="margin-top: 80px;">Top Adivina el numero</h2>
+
+            <div id="topadivinarLista">
+                <p style="float: left;margin-left: 20px;">Nombre</p><p style="float:right;margin-right: 20px;">Puntos</p>
+                <div style="clear:both"></div><hr>
+
+                <div id="TopAdivinar1">
+                   
+                </div>
+               
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tragamonedas">
+        <h2 style="margin-top: 50px;height: auto;">Ruleta de la suerte</h2>
+        <div style="padding-top: 50px">
+
+            <div ></div>
+            <audio autoplay id="audioruleta" >
+                <source src="audio/ruleta.mp3" type="audio/mp3" >
+
+            </audio>
+
+            <audio autoplay id="audioruletaset1" >
+                <source src="audio/set.mp3" type="audio/mp3" >
+
+            </audio>
+
+            <audio autoplay id="audioruletaset2" >
+                <source src="audio/set.mp3" type="audio/mp3" >
+
+            </audio>
+
+            <audio autoplay id="audioruletaset3" >
+                <source src="audio/set.mp3" type="audio/mp3" >
+
+            </audio>
+
+            <div id="RuletaDefault">
+                <img src="img/ruleta/1.png" width="130">
+                <img  src="img/ruleta/2.png" width="130">
+                <img  src="img/ruleta/3.png" width="130">
+            </div>
+
+            <div id="RuletaAnimado">
+                <img src="img/ruleta/ruleta.gif" width="130" id="Rulet1">
+                <img  src="img/ruleta/ruleta.gif" width="130" id="Rulet2">
+                <img  src="img/ruleta/ruleta.gif" width="130" id="Rulet3">
+            </div>
+            <br><br>
+
+            <input id="GirarRulet" type="button" style="border-radius: 25%;width: 200px;" class="botonRul btn btn-sm btn-success" value="Girar" onclick="GirarRuleta()">
+            <br><br><br><br><br><br><br><br>
+            <div id="RuletaGanaste" class="estadosRuleta">
+                    <h4>Ganaste el premio Superior!</h4>
+                    <img src="img/ruleta/iwon.gif" width="300">
+                    <h5>Ingresa tu nombre:</h5>
+                    <input type="text" id="nombreruleta" style="font-size: 30px;border-radius: 10px; text-align: center">
+                    <br>
+                    <h6 id="ingresaRuleta" style="font-weight: bold;font-size: 20px;color: #a30000;display: none;margin-bottom: 0px;margin-top: 0px;padding: 0px;">Ingresa tu nombre, porfavor...</h6>
+                    <input type="button" style="border-radius: 25%;width: 200px;margin-top: 0px" class="botonRul btn btn-sm btn-success" value="Aceptar" onclick="guardarRuleta();">
+
+
+            </div>
+
+            <div id="RuletaPop" class="estadosRuleta" style="background: #a30000">
+                    <h4>Anumaaa wey que hiciste??</h4>
+                    <img src="img/ruleta/bomba.jpg" width="300">
+                    <h3>No se que hiciste pero la cajetiaste y activaste una bomba bien random</h3>
+                    <h3>Tienes que desactivarla, corta el color correcto,Cual es?? !</h3>
+                    <input type="button" class="botonRul btn btn-sm btn-success" value="Rojo" onclick="explotar(1)">
+                    <input type="button" class="botonRul btn btn-sm btn-success" value="Amarillo" onclick="explotar(2)">
+                    <input type="button" class="botonRul btn btn-sm btn-success" value="Azul" onclick="explotar(3)">
+
+                    <div id="explosion" style="display:none">
+                        <img src="img/ruleta/explosion.gif">
+                        <h3 style="margin-top: -200px;font-size: 50px;background:black;width: 100%;" >Valio nepe, ese no era :(</h3>
+
+                    </div>
+
+                    
+
+                    <div id="explosion2" style="position: absolute;top: 0px;width: 100%;height: 100%;background: black;display: none">
+                        <h3 style="margin-top: 100px;font-size: 50px;background:black;width: 100%;" >Excelente Salvaste a todos... </h3>
+                        <h3 id="largavida2" style="margin-top: 50px;font-size: 50px;background:black;width: 100%;display: none" > de vivir una larga vida >:)!</h3>
+                    </div>
+
+                    <div id="explosion3"  style="position: absolute;top: 0px;width: 100%;height: 100%;background: black;display:none">
+                            <img src="img/ruleta/Hamster.jpg">
+                            <h3 style="margin-top: 0px;font-size: 50px;background:black;width: 100%;" >Ohh shit... :( </h3>
+
+
+
+                    </div>
+                    
+            </div>
+
+            <div id="RuletaProfe" class="estadosRuleta">
+                    <h4 style="font-size: 50px;margin-bottom: 0px">Exameeen D:</h4>
+                    <img src="img/ruleta/examen.jpg" width="300">
+                    <h3>Al profe se le ondeo y va a poner un examen de Calculo!</h3>
+                    <input type="button" style="height: auto;margin-bottom: 50px" class="botonRul btn btn-sm btn-success" value="Huele a gas :v" onclick="profe()">
+                    
+                    <div id="fuga" >
+                            <img src="img/ruleta/corre.gif" width="50%">
+                            <h3 style="margin-top: 0px;font-size: 50px;background:black;width: 100%;" >FUGAAAAA :v</h3>
+                        </div>
+                </div>
+
+
+
+
+        </div>
+        <div class="ListasTop">
+                <div class="icons" onclick="QuitarTop();" style="position: absolute; left: -20%;">
+                    <img src="img/quitar.png" width="30">
+                    <h4>Cerrar</h4>
+                </div>
+                <h2 style="margin-top: 80px;">Top Ruleta de la suerte</h2>
+                
+                <div id="cagajo">
+                    <p style="text-align: center;width: 100%">Ganadores</p>
+                    <div style="clear:both"></div><hr>
+    
+                    <div id="TopRuletas">
+                       
+                    </div>
+                   
+                </div>
+            </div>
+    
+
+    </div>
+
+
+</div>
+<h1 style="width: 100%;text-align: center;font-weight: bold">Carlos Armando Lopez Espinoza<br>01145483</h1>
+
+<h1 style="width: 100%;text-align:center">Aplicaciones WEB con Base de Datos</h1>
+<script src="js/script.js"></script>
+<script src="js/jquery-2.1.1.js"></script>
+</body>
+</html>

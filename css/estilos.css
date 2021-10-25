@@ -1,0 +1,525 @@
+body{
+    background-image:url("../img/fondo.fw.png");
+    background-size: 100%;
+
+}
+
+.header{
+    
+    text-align: center;
+    height: 50px;
+}
+
+.header a{
+    position: absolute;
+    left:20px;
+    margin-left: 30px;
+    text-decoration: none;
+    color:black;
+    background: #930d05;
+    margin-top: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 5px;
+    border:solid white;
+    color: white;
+    font-family: consolas;
+}
+
+
+
+.header>h1{
+    background: #930c05;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    border-top:solid #fff70f ;
+    border-bottom: solid #fff70f ;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    animation:myfirst 3s;
+    -moz-animation:myfirst 3s infinite; /* Firefox */
+    -webkit-animation:myfirst 3s infinite;
+    
+}
+h2{
+    background-image:url("../img/luces1.gif");
+    background-size: 100%;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+@-webkit-keyframes myfirst /* Safari and Chrome */ {
+    0% {border-top:solid #fff70f ; border-bottom: solid #fff70f ;  }
+    25% {border-top:solid red ; border-bottom: solid red ;}
+    75%{border-top:solid green ; border-bottom: solid green ;}
+    100% {border-top:solid blue ; border-bottom: solid blue;}
+    
+}
+.contenido{
+    width: 100%;
+  margin-top: 200px;
+}
+
+.contenido>div{
+    width:80%;
+    margin-left: 10%;
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contenido a {
+    font-family: consolas;
+    text-decoration: none;
+    color: white;
+    background: #930d05;
+    height: 50px;
+    width: 400px;
+    border: solid sienna;
+    font-size: 30px;
+    display: inline-table;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+.contenido a:hover {
+    transition: all 0.2s ease-in;
+    transform: scale(1.1);
+
+}
+
+.cuadro{
+    position: absolute;
+    height: 110%;
+    width: 100%;
+    background:  #6d1f11;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.cuadro>div{
+    /* background: #20252d; */
+    background-image:url("../img/fondo.fw.png");
+    background-size: 100%;
+    height: 100%;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    top:0px;
+    padding-top: 20px;
+}
+
+.cuadro h1{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.texto{
+    width: 20%;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.boton{
+    width: auto;
+    height: auto;
+    font-size: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.adivinar>h4{
+    font-size: 50px;
+}
+
+#Cargando,#GifNumeros,#Estado,#Lista,#tragamonedas,#adivinar{
+    display: none;
+    
+}
+
+#Estado,#Lista{
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top:50%;
+    font-size: 60px;
+    border-top:solid #6d1f11;
+    border-bottom:solid #6d1f11;
+    background: green;
+    color: aliceblue;
+}
+
+#Estado{
+    position: fixed;
+    top:200px;
+}
+
+#numero1,#numero2{
+    font-size: 80px;
+    color: white;
+    display: none;
+}
+
+.icons{
+    margin-top: 20px;
+    float: left;
+    cursor: pointer !important;
+    background: #770d00 !important;
+    width: 30px !important;
+    height: 30px !important;
+    overflow: hidden;
+    border:solid white;
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 0.2s ease;
+    padding-top: 5px !important;
+}
+
+.icons:hover{
+    width: 100px !important;
+    transition: all 0.2s ease;
+}
+
+.icons>img,.icons>h4{
+    float: left;
+}
+
+.icons>h4{
+    margin-left: 10px;
+    color: white;
+}
+
+
+#TopAdivinar1{
+    width: 100%;
+    
+}
+
+#fuck1{
+    float: right;
+    margin-right: 10%;
+}
+
+#fuck1>h4{
+    float: left;
+}
+
+#fuck1>img{
+    float: right;
+}
+
+
+.ListasTop{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.86); 
+    top:0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.ListasTop>div{
+    width: 40%;
+    background: rgba(255, 255, 255, 0.671);
+    border-radius: 10px;
+    margin-left: 30%;
+}
+
+.ListasTop p{
+    color: black;
+    font-size:20px;
+    font-weight: bold;
+}
+
+
+#RuletaAnimado{
+    display: none;
+    
+}
+
+#RuletaAnimado>img{
+    border: solid #fff70f 2px;
+    box-shadow: 5px 5px 20px 2px;
+    border-radius: 10px;
+}
+
+#RuletaDefault>img{
+    border: solid #fff70f 2px;
+    box-shadow: 5px 5px 20px 2px;
+    border-radius: 10px;
+}
+
+#RuletaAnimado>img,#RuletaDefault>img{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.botonRul{
+    width: auto;
+    height: auto;
+    font-size: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.estadosRuleta{
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top:10%;
+    height: 500px;
+    font-size: 60px;
+    border-top:solid #6d1f11;
+    border-bottom:solid #6d1f11;
+    background: green;
+    color: aliceblue;
+    display: none;
+}
+
+#explosion{
+    display:none;
+    position: fixed;
+    top:0px;
+    width: 100%;
+    height: 100%;
+
+}
+
+#explosion>img{
+    width: 100%;
+    height: 100%;
+}
+
+.puntos1 h4,.puntos2 h4{
+    font-size: 50px;
+}
+.puntos1,.puntos2{
+    bottom:10px;
+}
+
+.puntos1{
+    float: left;
+}
+
+.puntos2{
+    float:right;
+}
+
+
+#fuga{
+    display:none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: none;
+}
+
+#fuga>img{
+    width: 50%;
+    margin-top:0px;
+}
+
+#RuletaPop>h4{
+    font-size: 40px;
+}
+#RuletaProfe{
+    height: auto;
+}
+#RuletaProfe>img{
+    width: 30%;
+}
+
+#RuletaGanaste{
+    height: auto;
+}
+
+#RuletaGanaste>h4{
+    font-size: 60px !important;
+    margin-bottom: 0px;
+
+}
+
+#RuletaGanaste>h5{
+    font-size:50px !important;
+    margin-bottom: -10px;
+}
+
+
+@media (max-width:800px){
+    
+    .contenido>div{
+       margin-top: -80px;
+    }
+
+    .contenido>div>a{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .adivinar>h2{
+        padding-left: 20%;
+        padding-right: 20%;    
+        font-size: 30px;
+        
+    }
+    .puntos1,.puntos2{
+       top:350px;
+    }
+
+    #fuga>img{
+        width: 100%;
+        min-width: 60%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    
+    .puntos1 h4,.puntos2 h4{
+        font-size: 35px;
+    }
+    .puntos1{
+        float: left;
+        position: initial;
+    }
+
+    .puntos2{
+        float: right;
+    }
+
+    #numero1{
+        font-size: 70px;
+    }
+    #Cargando{
+        font-size: 30px;
+    }
+
+    .boton{
+        font-size: 30px;
+    }
+    #nombreruleta{
+        width: 80%;
+    }
+   
+
+    .icons{
+        width:100px !important ;
+    }
+
+    .ListasTop>h2{
+        font-size: 30px;
+        height: auto;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #topadivinarLista{
+        width: 90%;
+        margin-left: 5%;        
+    }
+    
+    .cuadro{
+        height: auto;
+    }
+
+    .tragamonedas>h2{
+        font-size: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    
+    
+    #RuletaDefault>img,#RuletaAnimado>img{
+        width: 90px;
+        margin-left: 0px;
+        margin-right: 0px;
+
+    }
+
+
+    #cagajo{
+        width: 90%;
+        margin-left: 5%; 
+    }
+
+    #RuletaGanaste>h4{
+        font-size: 30px !important;
+        margin-bottom: 0px;
+
+    }
+    #RuletaGanaste{
+       top: 20% !important;
+        height: auto;
+    }
+
+    #RuletaGanaste>h5{
+        font-size: 30px !important;
+        margin-bottom: -10px;
+    }
+
+    .botonRul{
+        width: 60%;
+        font-size: 30px;
+    }
+    #RuletaPop{
+        height: auto;
+        margin-top: 20px;
+    }
+    #RuletaProfe{
+        margin-top: 20px;
+        height: auto;
+    }
+
+    #RuletaProfe>img{
+        width: 80%;
+    }
+
+    #RuletaProfe>input{
+        font-size: 30px;
+
+    }
+    #RuletaPop>h4{
+        font-size: 30px;
+    }
+
+
+    #explosion>img{
+        height: 135%;
+    }
+    #explosion3{
+        top:0px;
+    }
+
+    #explosion3>img{
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width:400px){
+    #RuletaDefault>img,#RuletaAnimado>img{
+        width: 60px;
+        margin-left: 0px;
+        margin-right: 0px;
+
+    }
+
+    #fuck1{
+        margin-left: 0px;
+    }
+
+
+
+}
